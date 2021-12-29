@@ -120,3 +120,6 @@ now we run this testDetector to get resultant image<br>
 ![Image](assets/s5_detected.jpg)
 ![Image](assets/s6.png)
 ![Image](assets/s6_detected.jpg)
+
+# Code
+you can refer to the whole driver code which follow all the sequence shown above for a better understanding and easier working.
