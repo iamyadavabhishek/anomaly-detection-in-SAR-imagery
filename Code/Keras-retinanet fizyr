@@ -1,0 +1,2 @@
+In this project we’ve used the fizyr implementation of Keras-retinanet object detection model.
+https://github.com/fizyr/keras-retinanet.git
