@@ -125,3 +125,9 @@ now we run this testDetector to get resultant image<br>
 
 # Code
 you can refer to the whole [driver code](Code/anomaly_detection_in_sar_imagery.ipynb) which follow all the sequence shown above for a better understanding and easier working.
+
+# perfomance evaluation
+you can use tensorboard to check on mAP values of your model after every epoch
+`tensorboard --logdir D:\notebooks\RetinanetTutorial\Output --bind_all`
+
+![image](assets/image.png)
