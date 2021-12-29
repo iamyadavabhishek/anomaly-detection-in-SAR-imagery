@@ -1,7 +1,7 @@
 # anomaly-detection-in-SAR-imagery
 Anomaly detected using aerial imagery can be of many types like unknown ship in docks, or a unidentified aircraft at the airport and other similar anomalies. In this project we've mainly focused on ship dataset to detect all the ships in the waterbody using keras-retinanet.
 
-This code is based on [jasperb's](https://github.com/jaspereb/) excellent [tutorial on retinanet](https://github.com/jaspereb/Retinanet-Tutorial).<br>
+This code is inspired by [jasperb's](https://github.com/jaspereb/) helping [tutorial on retinanet](https://github.com/jaspereb/Retinanet-Tutorial).<br>
 
 # pre-requisites
 firstly you should have installed nvidia cuda toolkit so your jupyter notebook can access your gpu resources.<br>
