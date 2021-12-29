@@ -64,4 +64,46 @@ for i in os.listdir():
  ```
 5) `!mkdir D:\notebooks\RetinanetTutorial\Output\Snapshots` to make a directory to store your model snapshots
 
-# 
+# install the fizyr implementation
+```
+os.chdir(r'D:\notebooks\RetinanetTutorial/keras-retinanet')
+!pip install .
+```
+
+```
+os.chdir(r'D:\notebooks\RetinanetTutorial/keras-retinanet')
+!python setup.py build_ext --inplace
+```
+
+# training the model
+```
+os.chdir(r'D:\notebooks\RetinanetTutorial/keras-retinanet')
+%run keras_retinanet\bin\train.py --tensorboard-dir D:\notebooks\RetinanetTutorial\Output --snapshot-path D:\notebooks\RetinanetTutorial\Output\Snapshots --random-transform --steps 446 pascal D:\notebooks\RetinanetTutorial\SAR_Dataset
+```
+we run the train.py file which is the driver code responsible for creating our model snapshot. <br>
+`-tenosrboar-dir` takes the location of the output folder. this folder will have the mAP of the model after every epoch <br>
+`-snapshot-path` takes the locatoin of the folder in which the location of the snapshot will be stored.<br>
+`--random-transform` for enabling random transformation of the images for better learning <br>
+`-steps` provide the no. of image to take in every epoch<br>
+`pascal` is the type of dataset we're using. In our dataset we have dataset in the form of pascal-voc. this takes the location of the folder in which you've kept your dataset information(images,annotations,train,validation etc) <br>
+
+# convert the training model into inference model
+```
+os.chdir(r"D:/notebooks/RetinanetTutorial/keras-retinanet")
+%run keras_retinanet\bin\convert_model.py D:\notebooks\RetinanetTutorial\RetinanetModels\trained_model.h5 D:\notebooks\RetinanetTutorial\RetinanetModels\Inference_model.h5
+```
+we can check the map and choose the model with best mAP. you can stop the epochs when the model starts overfitting the data. <br>
+
+# dectection
+in the fizyr keras-retinanet, there is a python driver code 'testDetector.py' which we modify to take our model and our query image to detect the anamoly, which in our case is a ship<br>
+```
+model_path = 'D:/notebooks/RetinanetTutorial/RetinanetModels/Inference_model.h5'
+image_path = 'D:/notebooks/s1.jpg'
+image_output_path = 'D:/notebooks/RetinanetTutorial/SAR_Dataset/detected_images/s2_detected.jpg'
+confidence_cutoff = 0.5 #Detections below this confidence will be ignored
+```
+
+now we run this testDetector to get resultant image<br>
+
+# sample outputs
+![s5_detected](https://user-images.githubusercontent.com/94900416/147670123-a0fe77fc-daf9-4a8b-9f72-b67c80a544ce.jpg)
