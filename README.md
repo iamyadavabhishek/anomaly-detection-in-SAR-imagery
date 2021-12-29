@@ -106,4 +106,15 @@ confidence_cutoff = 0.5 #Detections below this confidence will be ignored
 now we run this testDetector to get resultant image<br>
 
 # sample outputs
-![Image](assets/s1.png)
+![Image](assets/s1.jpg)
+![Image](assets/s1_detected.jpg)
+![Image](assets/s2.jpg)
+![Image](assets/s2_detectd.jpg)
+![Image](assets/s3.jpg)
+![Image](assets/s3_detected.jpg)
+![Image](assets/s4.jpg)
+![Image](assets/s4_detected.jpg)
+![Image](assets/s5.png)
+![Image](assets/s5_detected.jpg)
+![Image](assets/s6.png)
+![Image](assets/s6_detected.jpg)
