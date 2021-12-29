@@ -21,8 +21,10 @@ you can also have a linux machine using gpu. any will work.
 
 # fizyr retinanet
 Fizyr has fortunately implemented the keras retinanet model and made it available to everyone who wants to use it so we don't have to implement the model from the scratch. we can fine tune the model so it works accordingly!
-
-![image](https://user-images.githubusercontent.com/94900416/147631868-38577ea9-9093-4407-aab6-8917253678af.png)
+```
+os.chdir(r"D:\notebooks\RetinanetTutorial")
+!git clone https://github.com/fizyr/keras-retinanet.git`
+```
 
 # preparing dataset
 firstly we need to seperate our dataset into train,test and validation.<br>
