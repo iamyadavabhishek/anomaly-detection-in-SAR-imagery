@@ -106,4 +106,4 @@ confidence_cutoff = 0.5 #Detections below this confidence will be ignored
 now we run this testDetector to get resultant image<br>
 
 # sample outputs
-![s5_detected](https://user-images.githubusercontent.com/94900416/147670123-a0fe77fc-daf9-4a8b-9f72-b67c80a544ce.jpg)
+![Image](assets/s1.png)
